@@ -1,0 +1,160 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.wrapper{
+    position: relative;
+    background: url(images/backjoy.jpg) no-repeat;
+    background-size: cover;
+    background-attachment: scroll;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+}
+.navbar{
+    max-width: 100%;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.navbar ul{
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px ;
+    height: 80px;
+    
+}
+.navbar ul li{
+    list-style: none;
+    margin: 0 8px;
+    display: inline-block;
+    line-height: 80px;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    padding: 6px 13px;
+    font-family: 'Roboto', sans-serif;
+    transition: 0.4s;
+}
+.navbar ul li a.active,
+.navbar ul li a:hover{
+    background: red;
+    border-radius: 2px;
+}
+
+.center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: sans-serif;
+    user-select: none;
+}
+.center h1{
+    color: white;
+    font-size: clamp(25px, 5vw, 65px);
+    font-weight: bold;
+    width: 90%;
+    text-align: center;
+}
+.center h2{
+    color: white;
+    font-size: clamp(25px, 5vw, 65px);
+    font-weight: bold;
+    width: 90%;
+    margin-top: 10px;
+    text-align: center;
+}
+.center .buttons{
+     display: flex;
+    justify-content: center;
+    gap: 25px;  /* فاصله بین دکمه‌ها */
+    margin-top: 35px;
+}
+.buttons button{
+    height: 50px;
+    width: 150px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffb3b3;
+    background: red;
+    border: 1px solid #cc0000;
+    outline: none;
+    cursor: pointer;
+    border-radius: 25px;
+    transition: 0.4s;
+}
+.buttons .btn{
+    margin-left: 0;
+}
+.buttons button:hover{
+    background-color: #cc0000;
+}
+    /* Navbar */
+    .navbar ul {
+        flex-direction: column;  /* ستونه */
+        gap: 10px;
+        padding: 0;             /* padding حذف شد */
+        margin: 0 auto;          /* وسط صفحه */
+        height: auto;
+        align-items: center;     /* وسط افقی لینک‌ها */
+    }
+    .navbar ul li {
+        line-height: normal;
+        text-align: center;
+}
+.navbar .dropdown {
+    position: relative; /* مهم */
+}
+
+.navbar .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: rgba(0,0,0,0.8);
+    border-radius: 8px;
+    min-width: 180px;
+    flex-direction: column;
+    z-index: 1000;
+}
+
+.navbar .dropdown-content a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.navbar .dropdown-content a i {
+    width: 20px;
+    text-align: center;
+}
+
+.navbar .dropdown:hover .dropdown-content {
+    display: flex;
+}
+@media (max-width: 480px) {
+
+    .navbar{
+        min-height: auto;
+        padding: 10px 0;
+    }
+
+    .navbar ul{
+        flex-direction: column;
+        gap: 10px;
+        height: auto;
+    }
+
+    .navbar ul li{
+        line-height: normal;
+    }
+}
